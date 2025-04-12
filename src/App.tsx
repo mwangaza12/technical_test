@@ -1,5 +1,5 @@
 import './index.css'
-import { Sparkle, MousePointer2, Star, CircleCheck, Instagram, ArrowUp, User } from 'lucide-react'
+import { Sparkle, MousePointer2, Star, CircleCheck, Instagram, ArrowUp, User, ChevronRight } from 'lucide-react'
 
 
 function App() {
@@ -183,12 +183,50 @@ function App() {
 
         {/* Section 7: Growth stats */}
         <div className="col-span-3 row-span-3 col-start-3 flex bg-white rounded-2xl p-5 justify-center items-center shadow-lg">
-          
+          <div>
+            <h2 className="text-4xl font-normal flex"><ChevronRight size={40}/>56%</h2>
+            <p className="text-gray-600 text-left text-sm">faster audience growth</p>
+            <div className="flex mt-3 justify-start relative">
+              <User className='bg-orange-400 p-1 rounded-full size-12'/>
+              <User className='bg-purple-400 p-1 rounded-full size-12 absolute left-9'/>
+              <User className='bg-green-400 p-1 rounded-full size-12 absolute left-18'/>
+            </div>
+          </div>
         </div>
 
         {/* Section 8: Growth analytics */}
         <div className="col-span-5 row-span-3 bg-indigo-600 rounded-2xl p-6 flex justify-baseline  items-center shadow-lg relative">
+          <div className="bg-white rounded-lg">
+            <div className="px-4 py-2 w-full">
+              <h3 className="text-xs font-medium text-gray-400">Follower Growth</h3>
+              <div className="flex items-center justify-between">
+              <h2 className="text-sm font-normal">20,642</h2>
+              <div className="ml-2 bg-green-300 text-white text-xs rounded px-1">+490%</div>
+            </div>
+            </div>
+            <div className="flex items-end h-20 space-x-1 p-1">
+              {[30, 40, 60, 70, 80].map((height, i) => (
+                <div 
+                  key={i} 
+                  className="w-6 rounded-lg bg-indigo-400 mb-7" 
+                  style={{ height: `${height}%` }}
+                ></div>
+              ))}
+            </div>
+          </div>
           
+          <div className="text-white text-3xl items-start font-normal tracking-tighter leading-6 m-8">
+            Grow followers <br /> with non-stop <br /> content.
+          </div>
+
+          <div className="flex items-center p-2 bg-white rounded-3xl absolute bottom-1 left-10">
+            <ArrowUp className='bg-yellow-600 rounded-full p-1' />
+            <div>
+              <h3 className="text-xs mr-2 text-gray-400">Followers</h3>
+              <div className="text-sm font-normal">89,532</div>
+            </div>
+            <div className="ml-2 bg-green-300 text-white text-xs rounded px-1 bottom-0">+120%</div>
+          </div>
         </div>
       </div>
     </div>
