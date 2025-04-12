@@ -9,4 +9,5 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
+  base: '/technical_test/',
 })
